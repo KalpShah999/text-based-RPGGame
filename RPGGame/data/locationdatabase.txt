@@ -1,0 +1,10 @@
+Telkyn-Castle-Streets 0.00 
+Telkyn-Hospital 0.00 
+Telkyn-Market-Place 0.00 
+Forest-West-Entrance 0.75 
+Forest-West-Side 0.8
+Forest-Center 0.8
+Forest-East-Side 0.8
+Forest-East-Entrance 1.0
+Forest-South-Side 0.9
+Forest-North-Side 0.9

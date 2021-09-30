@@ -1,0 +1,5 @@
+Hands 3 0.2 0.85 1
+Broken-Wooden-Sword 3 0.25 1.00 1
+Wooden-Sword 5 0.15 0.80 1
+Broken-Stone-Sword 6 0.20 1.00 2
+Stone-Sword 10 0.15 0.80 2

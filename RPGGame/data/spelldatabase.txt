@@ -1,0 +1,11 @@
+Basic-Fire-Ball 0 10 0.25 0.8 1
+Basic-Lightning-Ball 0 10 0.4 0.75 1
+Basic-Ice-Ball 0 10 0.3 0.8 1
+Basic-Energy-Ball 0 15 0.25 0.75 1
+Basic-Heal 1 20 0.00 0.95 1
+Intermediate-Fire-Ball 0 50 0.4 0.7 2
+Intermediate-Lightning-Ball 0 50 0.35 0.6 2
+Intermediate-Ice-Ball 0 50 0.35 0.8 2
+Intermediate-Energy-Ball 0 60 0.35 0.6 2
+Intermediate-Heal 1 35 0.00 0.85 2
+Critical-Chance 2 2 0.00 0.8 2
