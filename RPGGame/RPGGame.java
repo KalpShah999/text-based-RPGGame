@@ -21,7 +21,7 @@ public class RPGGame {
 
     public void StartScreen() {
         myScanner = new Scanner (System.in);
-        File x = new File("/Users/kalp/Documents/VSCode/RPGGame/data/database.txt");
+        File x = new File("./data/database.txt");
 
         if (x.exists()) {
             System.out.println("\nWhat would you like to do? \n " + 
@@ -133,10 +133,10 @@ public class RPGGame {
     }
 
     public static void WriteInFile(String username, String password) {
-        File x = new File ("/Users/kalp/Documents/VSCode/RPGGame/data/database.txt"); 
+        File x = new File ("./data/database.txt"); 
         if (x.exists()) {
             try {
-                writer = new FileWriter("/Users/kalp/Documents/VSCode/RPGGame/data/database.txt", true);
+                writer = new FileWriter("./data/database.txt", true);
                 writer.write(username + " " + password + " \n");
                 writer.close();
             } catch (Exception e) {
@@ -147,18 +147,18 @@ public class RPGGame {
     
     public void ReadFile () {
         System.out.print("\nFileReading...");
-        File x = new File ("/Users/kalp/Documents/VSCode/RPGGame/data/database.txt"); 
+        File x = new File ("./data/database.txt"); 
 
         if (!x.exists()) {
             try {
-                writer = new FileWriter("/Users/kalp/Documents/VSCode/RPGGame/data/database.txt");
+                writer = new FileWriter("./data/database.txt");
             } catch (Exception e) {
                 System.out.println("\nError loading database.");
             }
         }
         
         try {
-            fileScanner = new Scanner (new File ("/Users/kalp/Documents/VSCode/RPGGame/data/database.txt"));
+            fileScanner = new Scanner (new File ("./data/database.txt"));
         } catch (Exception e) {
             System.out.println("\nError loading database."); 
         }
@@ -226,11 +226,11 @@ public class RPGGame {
 
     public void LoadPlayerData(String username) {
         System.out.print("\nLoading " + username + "...");
-        File x = new File ("/Users/kalp/Documents/VSCode/RPGGame/data/" + username + ".txt"); 
+        File x = new File ("./data/" + username + ".txt"); 
 
         if (!x.exists()) {
             try {
-                writer = new FileWriter("/Users/kalp/Documents/VSCode/RPGGame/data/" + username + ".txt");
+                writer = new FileWriter("./data/" + username + ".txt");
                 writer.write(username + " null 1 1 0 20 1 null 1 null null null Hands");
                 writer.close();
             } catch (Exception e) {
@@ -239,7 +239,7 @@ public class RPGGame {
         }
         
         try {
-            fileScanner = new Scanner (new File ("/Users/kalp/Documents/VSCode/RPGGame/data/" + username + ".txt"));
+            fileScanner = new Scanner (new File ("./data/" + username + ".txt"));
         } catch (Exception e) {
             System.out.println("\nError loading database."); 
         }
@@ -266,7 +266,7 @@ public class RPGGame {
 
         if (weaponNameDatabase.size() == 0) {
             try {
-                fileScanner = new Scanner (new File ("/Users/kalp/Documents/VSCode/RPGGame/data/weaponsdatabase.txt"));
+                fileScanner = new Scanner (new File ("./data/weaponsdatabase.txt"));
             } catch (Exception e) {
                 System.out.println("\nError loading weapons database."); 
             }
@@ -284,7 +284,7 @@ public class RPGGame {
 
         if (locationNameDatabase.size() == 0) {
             try {
-                fileScanner = new Scanner (new File ("/Users/kalp/Documents/VSCode/RPGGame/data/locationdatabase.txt"));
+                fileScanner = new Scanner (new File ("./data/locationdatabase.txt"));
             } catch (Exception e) {
                 System.out.println("\nError loading location database."); 
             }
@@ -297,7 +297,7 @@ public class RPGGame {
 
         if (enemyNameDatabase.size() == 0) {
             try {
-                fileScanner = new Scanner (new File ("/Users/kalp/Documents/VSCode/RPGGame/data/enemydatabase.txt"));
+                fileScanner = new Scanner (new File ("./data/enemydatabase.txt"));
             } catch (Exception e) {
                 System.out.println("\nError loading enemy database."); 
             }
@@ -314,7 +314,7 @@ public class RPGGame {
 
         if (spellNameDatabase.size() == 0) {
             try {
-                fileScanner = new Scanner (new File ("/Users/kalp/Documents/VSCode/RPGGame/data/spelldatabase.txt"));
+                fileScanner = new Scanner (new File ("./data/spelldatabase.txt"));
             } catch (Exception e) {
                 System.out.println("\nError loading enemy database."); 
             }
@@ -331,7 +331,7 @@ public class RPGGame {
 
         if (experienceBoundries.size() == 0) {
             try {
-                fileScanner = new Scanner (new File ("/Users/kalp/Documents/VSCode/RPGGame/data/experiencebound.txt"));
+                fileScanner = new Scanner (new File ("./data/experiencebound.txt"));
             } catch (Exception e) {
                 System.out.println("\nError loading experience database."); 
             }
@@ -347,7 +347,7 @@ public class RPGGame {
     }
 
     public void SavePlayerData() {
-        File x = new File ("/Users/kalp/Documents/VSCode/RPGGame/data/" + playerUsername + ".txt"); 
+        File x = new File ("./data/" + playerUsername + ".txt"); 
         if (x.exists()) {
             try {
                 playerLocation = playerLocation.replace(" ", "-");
@@ -355,7 +355,7 @@ public class RPGGame {
                 playerMagicSpell1 = playerMagicSpell1.replace(" ", "-");
                 playerMagicSpell1 = playerMagicSpell2.replace(" ", "-");
                 playerMagicSpell1 = playerMagicSpell3.replace(" ", "-");
-                writer = new FileWriter("/Users/kalp/Documents/VSCode/RPGGame/data/" + playerUsername + ".txt");
+                writer = new FileWriter("./data/" + playerUsername + ".txt");
                 writer.write(playerUsername + " " + playerArmour + " " + playerAttackLevel + " " + playerDefenseLevel 
                     + " " + playerExperience + " " + playerHealth + " " + playerLevel + " " + playerLocation 
                     + " " + playerMagicLevel + " " + playerMagicSpell1 + " " + playerMagicSpell2 
